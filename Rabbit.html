@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"  content="width=device-width,intial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title></title>
+    </head>
+    <style>
+         body{
+            font-family:'Ubuntu', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background: url("FORM.jpg");
+            background-size: 1550px; 
+        }
+            .mid{
+            display: block;
+            width: 49%;
+            margin: 20px auto;
+            }
+            .navbar{
+            position: absolute;
+            display: inline-block;
+            width: 32%;
+            top: 4%;
+            left: 35%;
+            background-color: #333;
+            font-family: Arial;
+        }
+
+        
+        .navbar a{
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+    ;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+         background-color: red;
+        }
+        
+        .dropdown {
+         float: left;
+         overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+        .drop {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .drop a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .drop a:hover {
+  background-color: #ddd;
+}
+         /* adding back button */
+         button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc ;
+}
+
+
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .drop {
+  display: block;
+}
+    
+    img{
+        width:500px ;
+        height: 80vh;
+        position: relative;
+        background-size: cover;
+        padding-top: 100px;
+        padding-left: 80px;
+
+    }
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    .wrapper {
+        height: 72%;
+        width: 25%;
+        position: absolute;
+        transform-style: preserve-3d;
+        display: inline-block;
+        margin: 0 10px;
+        margin-left: 23%;
+        margin-top: 8%;
+        perspective: 1000px; /* Add perspective for 3D effect */
+        transition: transform 0.1s, box-shadow 0.3s, background-color 0.8s; /* Add transitions */
+        border-radius: 5px;
+
+    }
+    
+    .wrapper .card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.5s; /* Add transition for smooth flip effect */
+        border-radius: 10px; /* Adjust the border radius as needed */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for pop-up effect */
+        background: linear-gradient(#f9f9f9, rgba(0, 0, 0, 0.2)); /* Same color as the back face */
+    }
+    
+    .wrapper .card .front-face,
+    .wrapper .card .back-face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden; /* Hide the back face during the flip */
+        border-radius: 10px;
+        background-color: white; 
+         /* Adjust the border radius as needed */
+    }
+    
+    .wrapper .card .front-face {
+        transform: rotateY(0deg); /* Initial state for the front face */
+    }
+    
+    .wrapper .card .back-face {
+        transform: rotateY(180deg); /* Initial state for the back face */
+    }
+    
+    .wrapper:hover {
+        transform: translateZ(20px); /* Adjust the pop-up distance as needed */
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Increase the shadow for more pop-up effect */
+        background-color: #f9f9f9; /* Change the background color on hover */
+    }
+    
+    .wrapper:hover .card {
+        transform: rotateY(180deg); /* Rotate the card on hover */
+    }
+    
+</style>
+    <body>
+        <a href="mainPage.html"><button type="button">Back</button></a>
+        <img id="myImage" src="ra1.jpeg" alt="Initial Image">
+
+    <script>
+      // Array of image sources
+      var imageSources = ["ra2.jpeg", "ra3.jpeg"];
+    
+      // Function to change the image source
+      function changeImage() {
+        // Get the image element by ID
+        var imgElement = document.getElementById("myImage");
+    
+        // Randomly select an image source from the array
+        var randomIndex = Math.floor(Math.random() * imageSources.length);
+        var newImageSource = imageSources[randomIndex];
+    
+        // Update the image source
+        imgElement.src = newImageSource;
+      }
+    
+      // Change the image every 5 seconds (5000 milliseconds)
+      setInterval(changeImage, 1500);
+    </script> 
+    <div class="wrapper">
+        <div class="card">
+            <div class="front-face">
+                <b><h3>&nbsp;About:</h3></b><br/><br/>
+                Rabbits, also known as bunnies or bunny rabbits, are small mammals in the family Leporidae, which is in the order Lagomorpha. Oryctolagus cuniculus is the European rabbit, including its descendants, the world's 305 breeds of domestic rabbit.<br/><br/>
+Lifespan: European rabbit: 9 years, Pygmy rabbit: 3 – 5 years<br/><br/>
+Gestation period: European rabbit: 28 – 35 days, MORE Encyclopedia of Life<br/><br/>
+Mass: European rabbit: 1 – 2.5 kg, Eastern cottontail: 1.2 kg, MORE Encyclopedia of Life<br/><br/>
+Class: Mammalia<br/><br/>
+Domain: Eukaryota<br/><br/>
+Family: Leporidae
+
+
+
+            </div>
+            <div class="back-face">
+                <br>
+         <h3>Vaccination:</h3><br/>
+        5 weeks onwards : anti-RVHD 1 & 2<br>
+               <h2>Health issue:</h2><br/>
+              <b> Obesity:</b> Overfeeding and a lack of exercise can lead to obesity in rabbits. Obesity can contribute to other health issues, such as joint problems.<br/>
+                <b>Heat Stroke:</b> Rabbits can be sensitive to high temperatures and may suffer from heat stroke if exposed to extreme heat. Providing a cool and shaded environment is crucial.<br/>
+                    <b>Ear Infections:</b> Rabbits with long ears may be prone to ear infections. Signs include head shaking, scratching, and discharge from the ears  need to protect your rabbits against two strains of RVHD, known as RVHD1 and RVHD2.<br/>
+                        <br/><br/>It's essential for rabbit owners to observe their pets regularly, provide a balanced diet, keep them in a clean and safe environment, and seek veterinary attention promptly.
+
+
+ <br/>
+<br/>
+How to Train Rabbits:<a href="https://youtu.be/T3fr6_IbBw8?si=rVj3hK3k6zeZCFh0">CLICK HERE</a>
+<br/>
+</div>
+</div>
+</div>
+
+<div class="mid">
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Dogs
+            <i class="fa fa-caret-down"></i></button>
+            <div class="drop">
+                <a href="Labrodar.html">Labrodar</a>
+                <a href="GermanShephard.html">German Shephard</a>
+                <a href="Mudhol.html">Mudhol</a>
+                <a href="GoldenRetriver.html">Golden Retriver</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Cats
+            <i class="fa fa-caret-down"></i></button>
+            <div class="drop">
+                <a href="PersianCat.html">Persian Cat</a>
+                <a href="BengalCat.html">Bengal Cat</a>
+                <a href="SiameseCat.html">Siamese Cat</a>
+                <a href="HimalayanCat.html">Himalyan Cat</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Other Animals
+            <i class="fa fa-caret-down"></i></button>
+            <div class="drop">
+                <a href="Rabbit.html">Rabbit</a>
+                <a href="Birds.html">Birds</a>
+                <a href="Cow.html">Cow</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About Us
+            <i class="fa fa-caret-down"></i></button>
+            <div class="drop">
+                <a href="123456789">Contact Number</a>
+                <a href="animalrescue@gmail.com">E-mail</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Donate
+            <i class="fa fa-caret-down"></i></button>
+            <div class="drop">
+                <a href="payment.html">click to donate</a>
+
+               
+        </div>
+        </div>
+</div>
+</body>
+
+

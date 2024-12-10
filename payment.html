@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Rescue - Donation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the content */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+        }
+
+        .method-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .btn-pay {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px; /* Add margin-top to create space between the methods and the button */
+        }
+
+        .btn-pay:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Animal Rescue Donation</h1>
+
+    <p>Thank you for choosing to support Animal Rescue. Please select your preferred payment method:</p>
+
+    <div class="payment-methods">
+        <div class="payment-method">
+            <form action="donation.html">
+            <input type="radio" name="payment-method" id="upi">
+            <label for="upi"><img src="upi.png" alt="UPI" class="method-icon"> UPI</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="net-banking">
+            <label for="net-banking"><img src="net.png" alt="Net Banking" class="method-icon"> Net Banking</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="credit-card">
+            <label for="credit-card"><img src="creditcard.jpeg" alt="Credit Card" class="method-icon"> Credit Card</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="debit-card">
+            <label for="debit-card"><img src="debitcard.png" alt="Debit Card" class="method-icon"> Debit Card</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="phonepe">
+            <label for="phonepe"><img src="phonepe.png" alt="PhonePe" class="method-icon"> PhonePe</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="google-pay">
+            <label for="google-pay"><img src="googlepay.jpeg" alt="Google Pay" class="method-icon"> Google Pay</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" name="payment-method" id="paytm">
+            <label for="paytm"><img src="paytm.png" alt="Paytm" class="method-icon"> Paytm</label>
+        </div>
+    </div>
+
+    <button class="btn-pay">Proceed to Payment</button>
+    <a href="mainPage.html"><button  class="btn-pay" type="button">Back</button></a>
+</div>
+</form>
+</body>
+</html>

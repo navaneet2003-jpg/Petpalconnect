@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Furry Friend - Adoption Form</title>
+  <style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 20px;
+}
+/* logo */
+.left{
+         display: inline-block;
+            position: absolute;
+            left: 33px;
+            top: 20px;
+        }
+        .left img{
+         width: 86px;
+         border-radius: 10000px;
+        }
+form {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc ;
+}
+  </style>  
+</head>
+<body>
+    <div class="left">
+        <img src="paws.avif" alt="">
+    </div>
+  <header>
+    <h1>Find Your Furry Friend!</h1>
+  </header>
+  <main>
+    <form action="/submit-adoption-form" method="post">
+      <h2>Adoption Form</h2>
+      <div class="field">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="contact_info">Contact Information:</label>
+        <input type="text" id="contact_info" name="contact_info" required>
+      </div>
+      <div class="field">
+        <label for="desired_pet">Desired Pet Type:</label>
+        <select id="desired_pet" name="desired_pet">
+          <option value="">Please Select</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="desired_breed">Desired Breed (Optional):</label>
+        <input type="text" id="desired_breed" name="desired_breed">
+      </div>
+      <div class="field">
+        <label for="experience">Previous Pet Experience:</label>
+        <select id="experience" name="experience">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="living_situation">Living Situation:</label>
+        <select id="living_situation" name="living_situation">
+          <option value="house">House</option>
+          <option value="apartment">Apartment</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Additional Information (Optional):</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+      <button type="submit">Submit Form</button>
+      <a href="adopt.html"><button type="button">Back</button></a>
+    </form>
+  </main>
+</body>
+</html>

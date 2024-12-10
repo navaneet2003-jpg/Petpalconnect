@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"  content="width=device-width,intial-scale=1.0">
+        <meta http-equiv="X-UA-Compatiable" content="ie=edge">
+        <title></title>
+    </head>
+    <style>
+         body{
+            font-family:'Ubuntu', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            background: url("FORM.jpg");
+            background-size: 1550px; 
+        }
+            .mid{
+            display: block;
+            width: 49%;
+            margin: 20px auto;
+            }
+            .navbar{
+            position: absolute;
+            display: inline-block;
+            width: 32%;
+            top: 4%;
+            left: 35%;
+            background-color: #333;
+            font-family: Arial;
+        }
+
+        
+        .navbar a{
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+    ;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn {
+         background-color: red;
+        }
+        
+        .dropdown {
+         float: left;
+         overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit; /* Important for vertical align on mobile phones */
+            margin: 0; /* Important for vertical align on mobile phones */
+        }
+        .drop {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .drop a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .drop a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .drop {
+  display: block;
+}
+    
+    img{
+        width:500px ;
+        height: 80vh;
+        position: relative;
+        background-size: cover;
+        padding-top: 100px;
+        padding-left: 80px;
+
+    }
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+    .wrapper {
+        height: 72%;
+        width: 25%;
+        position: absolute;
+        transform-style: preserve-3d;
+        display: inline-block;
+        margin: 0 10px;
+        margin-left: 23%;
+        margin-top: 8%;
+        perspective: 1000px; /* Add perspective for 3D effect */
+        transition: transform 0.1s, box-shadow 0.1s, background-color 0.5s; /* Add transitions */
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    .wrapper .card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.3s; /* Add transition for smooth flip effect */
+        border-radius: 10px; /* Adjust the border radius as needed */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for pop-up effect */
+        /* background: linear-gradient(#f9f9f9, rgba(0, 0, 0, 0.2)); Same color as the back face */
+    }
+    
+    .wrapper .card .front-face,
+    .wrapper .card .back-face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden; /* Hide the back face during the flip */
+        border-radius: 20px;
+         /* Adjust the border radius as needed */
+         background-color: white;
+         padding: 10px;
+
+    }
+    
+    .wrapper .card .front-face {
+        transform: rotateY(0deg); /* Initial state for the front face */
+    }
+    
+    .wrapper .card .back-face {
+        transform: rotateY(180deg); /* Initial state for the back face */
+    }
+    
+    .wrapper:hover {
+        transform: translateZ(20px); /* Adjust the pop-up distance as needed */
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3); /* Increase the shadow for more pop-up effect */
+        background-color: #f9f9f9; /* Change the background color on hover */
+    }
+    
+    .wrapper:hover .card {
+        transform: rotateY(180deg); /* Rotate the card on hover */
+    }
+    /* adding back button */
+    button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ccc ;
+}
+    
+</style>
+    <body>
+      <a href="mainPage.html"><button type="button">Back</button></a>
+        <img id="myImage" src="german2.jpeg" alt="Initial Image">
+
+    <script>
+      // Array of image sources
+      var imageSources = ["german3.jpeg", "german1.jpeg"];
+    
+      // Function to change the image source
+      function changeImage() {
+        // Get the image element by ID
+        var imgElement = document.getElementById("myImage");
+    
+        // Randomly select an image source from the array
+        var randomIndex = Math.floor(Math.random() * imageSources.length);
+        var newImageSource = imageSources[randomIndex];
+    
+        // Update the image source
+        imgElement.src = newImageSource;
+      }
+    
+      // Change the image every 5 seconds (5000 milliseconds)
+      setInterval(changeImage, 1500);
+    </script> 
+    <div class="wrapper">
+        <div class="card">
+            <div class="front-face">
+                <b><h3>&nbsp;About:</h3></b><br/><br/>
+                The German Shepherd, also known in Britain as an Alsatian, is a German breed of working dog of medium to large size. The breed was developed by Max von Stephanitz using various traditional German herding dogs from 1899. It was originally bred as a herding dog, for herding sheep. <br/><br/>
+                Life span: 9 – 13 years<br/><br/>
+Colors: Black, White, Black & Tan, Black & Silver, Sable, Red & Black, Grey<br/><br/>
+Weight: Male: 30–40 kg, Female: 22–32 kg<br/><br/>
+Temperament: Stubborn, Curious, Intelligent, Alert, Obedient, Loyal, Protective, Confident, Watchful, Courageous, Brave.<br/><br/>
+Height: Male: 60–65 cm, Female: 55–60 cm.<br/><br/>
+</div>
+<div class="back-face">
+    <h3>Vaccination:</h3><br/>
+6-8 weeks : DA2PP*<br/>
+10-12 weeks : DA2PP*<br/>
+14-16 weeks : Rabbies**,DA2PP*<br/>
+Annual Examination : Rabbies**,DA2PP*<br/> 
+<br>
+    <b><h3>Health issue:</h3></b><br/><br/>
+German Shepherds commonly also get gastric dilation and volvulus (GDV), commonly known as bloat, as well as cancer, allergies, heart disease, and a few other conditions.<br/><br/>It's important for German Shepherd owners to be aware of these potential health issues and to provide regular veterinary check-ups, a balanced diet, regular exercise, and preventive care to ensure the well-being of their dogs. Regular veterinary visits can help catch and address health issues early on.
+<br/>
+<br/>
+How to Train GermanShephard:<a href="https://youtu.be/60l-0CNKIsU?si=Z4htKYTIsNxiv0OO">CLICK HERE</a>
+<br/>
+</div>
+</div>
+</div>
+
+
+
+    
+        <div class="mid">
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Dogs
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="drop">
+                        <a href="Labrodar.html">Labrodar</a>
+                        <a href="GermanShephard.html">German Shephard</a>
+                        <a href="Mudhol.html">Mudhol</a>
+                        <a href="GoldenRetriver.html">Golden Retriver</a>
+                </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Cats
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="drop">
+                        <a href="PersianCat.html">Persian Cats</a>
+                        <a href="BengalCat.html">Bengal Cat</a>
+                        <a href="SiameseCat.html">Siamese Cat</a>
+                        <a href="HimalayanCat.html">Himalyan Cat</a>
+                </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Other Animals
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="drop">
+                        <a href="Rabbit.html">Rabbit</a>
+                        <a href="Birds.html">Birds</a>
+                        <a href="Cow.html">Cow</a>
+                </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">About Us
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="drop">
+                        <a href="123456789">Contact Number</a>
+                        <a href="animalrescue@gmail.com">E-mail</a>
+                </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Donate
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="drop">
+                        <a href="payment.html">click to donate</a>
+                </div>
+                </div>
+    </div>
+</body>

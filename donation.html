@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Rescue - Donate</title>
+    <style>
+
+        /* Your donation page styles... */
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #384351;
+  font-family: Raleway;
+  color: white;
+  letter-spacing: 1px;
+}
+/* logo */
+.left{
+            display: inline-block;
+            position: absolute;
+            left: 33px;
+            top: 20px;
+        }
+        .left img{
+         width: 86px;
+         border-radius: 10000px;
+        }
+
+.card-form {
+  width: 40em;
+  height: 30em;
+  border-radius: 10px;
+  background: 333c4a;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+.card-form .form-indicator {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 0.5em;
+  font-size: 20px;
+  font-weight: bold;
+  background: #27ae60;
+  border-radius: 10px 10px 0 0;
+}
+.card-form .form-body {
+  padding: 10px;
+}
+.card-form .form-body .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+.card-form .form-body .row input[type="text"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  margin: 0 15px;
+  height: 35px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #262c36;
+  color: #7c8086;
+  font-size: 14px;
+}
+.card-form .form-body .row .form-block .button {
+  
+  text-align:justify;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 14px;
+  background: #262c36;
+  margin: 10px;
+  font-size: 14px;
+  -webkit-transition: 400ms background-color;
+	-moz-transition: 800ms opacity, 800ms right;
+	-ms-transition: 800ms opacity, 800ms right;
+	-o-transition: 800ms opacity, 800ms right;
+	transition: 200ms background-color;
+}
+.card-form .form-body .row .form-block .button:hover {
+	background-color: #82d14b;
+}
+/* .card-form .form-body .row .form-block .button:visited {
+	background-color: #82d14b;
+} */
+.card-form .form-footer {
+  margin: 0 25px 15px 25px;
+  padding: 15px 10px;
+}
+
+.card-form .form-footer .btn {
+  text-align:center;
+  
+  display: inline-block;
+  height: 30px;
+  width:95%;
+  
+  line-height: 30px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 10px;
+  background: #82d14b;
+  margin: 5px;
+  font-size: 14px;
+    -webkit-transition: 400ms background-color;
+	-moz-transition: 800ms opacity, 800ms right;
+	-ms-transition: 800ms opacity, 800ms right;
+	-o-transition: 800ms opacity, 800ms right;
+	transition: 200ms background-color;
+}
+
+.card-form .form-footer .btn:hover{
+  background-color: #9be765;
+}
+    </style>
+</head>
+
+<body>
+  <div class="left">
+    <img src="paws.avif" alt="">
+  </div>
+    <div class="card-form">
+        <form class="deposit">
+          <div class="form-indicator"></div>
+          <div class="form-body">
+            <div class="row">
+              <h1 style="margin-bottom:0px;">DEPOSIT FUNDS</h2>
+            </div> 
+            <div class="row" >
+              <p style="margin-top:0px;" id ="donation">0 rs in the last 24 hours</p>
+            </div>
+            <div class="row">
+              <div class="form-block">
+                <div class="button" id="1" onclick="setValue(this)">50</div>
+                <div class="button" id="2" onclick="setValue(this)">100</div>
+                <div class="button" id="3" onclick="setValue(this)">500</div>
+                <div class="button" id="4" onclick="setValue(this)">1000</div>
+                <div class="button" id="5" onclick="setValue(this)">10000</div>
+              </div>
+            </div>
+            <div class="row">
+              <input type="text" id="cc" maxlength="16" placeholder="Credit card number">
+            </div>
+            <div class="row">
+              <input type="text" id="name" placeholder="Name on card">
+              <input type="text" id ="date" maxlength="5" placeholder="MM/YY">
+              <input type="text" id ="cvc" maxlength="4" placeholder="CVC">
+            </div>
+          </div>
+          <div class="form-footer">
+            <div class="btn" onclick="validate()">Deposit Funds</button>
+          </div>
+        </form>
+      </div>
+    <!-- <h1>Importance of Donating to Animals</h1> -->
+    <!-- <p>Here, you can provide information about the importance of donating to animals, along with details about your organization, Animal Rescue.</p> -->
+    <!-- <p>Feel free to add any relevant content here.</p> -->
+
+    <script>
+        function validate() {
+            // Redirect to the payment.html page
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+
+</html>

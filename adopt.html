@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<head>
+    <style>
+body {
+    background: url(FORM.jpg);
+    background-size: cover; /* Ensure it covers the entire area */
+    background-attachment: fixed; /* Make it fixed so it doesn't scroll */
+    width: 100%;
+    height: 100vh;
+}  
+
+img { max-width:100%; }
+
+a {
+	-webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	-ms-transition: all 150ms ease;
+	-o-transition: all 150ms ease;
+	transition: all 150ms ease; 
+	}
+    a:hover {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+        filter: alpha(opacity=50); /* IE7 */
+        opacity: 0.6;
+        text-decoration: none;
+    }
+
+
+/* Container */
+.container-fluid {
+    background:url(back.jpg);
+    margin: 40px auto 10px;
+    padding: 20px 40px 0;
+    max-width: 960px;
+    box-shadow: 0 1px 1px rgba(114, 97, 97, 0.1);
+}
+/* logo */
+.left{
+            display: inline-block;
+            position: absolute;
+            left: 33px;
+            top: 20px;
+        }
+        .left img{
+         width: 86px;
+         border-radius: 10000px;
+        }
+
+.page-header {
+    background: transparent;
+    margin: -30px -40px 40px;
+    padding: 20px 40px;
+    border-top: 0px solid #ccc;
+    color: #999;
+    text-transform: uppercase;
+    }
+    .page-header h3 {
+        line-height: 0.88rem;
+        color: #000;
+        font-size: 32px;
+        }
+
+        button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+/* Thumbnail Box */
+.caption h4 {
+    font-size: 1rem;
+    color: #444;
+    }
+    .caption p {
+        font-size: 0.95rem;
+        color: #080808;
+        }
+        .btn.btn-mini {
+            font-size: 1rem;
+            }
+
+
+/* Carousel Control */
+.control-box {
+    text-align: left;
+    width: 100%;
+    }
+    .carousel-control{
+        background: #666;
+        border: 0px;
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 34px;
+        font-weight: 200;
+        line-height: 18px;
+        opacity: 0.5;
+        padding: 4px 10px 0px;
+        position: sticky;
+        height: 30px;
+        width: 15px;
+        }
+
+
+/* Footer */
+.footer {
+    margin: auto;
+    width: 100%;
+    max-width: 960px;
+    display: inline;
+    font-size: 0.69rem;
+    }
+    .footer, .footer a {
+        color: #c9e4f7;
+        }
+        p.right  { 
+            float: right; 
+            }
+
+
+    </style>
+    <script>
+          $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 6000
+    })
+  });
+    </script>
+</head>
+<body>
+    <div class="left">
+        <img src="paws.jpeg" alt="">
+    </div>
+    <form action="mainPage.html">
+<div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span12">
+    
+        <div class="page-header">
+            <h3> Animals For Adpotion</h3>
+            <a href="mainPage.html"><button type="submit">Back</button></a>
+        <!-- <p><input type="submit" value="Back" name="Back"></p> -->
+        </div>    
+        <div class="carousel slide" id="myCarousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                        <ul class="thumbnails">
+                            <li class="span3">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="DA1.jpeg" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Breed:Indie Dog</h4>
+                                    <p>Age:6months-1year <br>Dogs are healthy in condition and all the Vaccinations are done <br> Active in nature <br>Location:Hubli</p>
+                                    <a class="btn btn-mini" href="adpotionform.html">&raquo; Are you Intrested in Adoption<br></a>
+                                </div>
+                            </li>
+                            <li class="span3">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="DA2.jpeg" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4> Breed:Retriver</h4>
+                                    <p>Age:5yrs<br> Bit unhealthy in <br>Very Friendly to the Family<br>Location:Dharwad</p>
+                                    <a class="btn btn-mini" href="adpotionform.html">&raquo;Are you Intrested in Adoption</a>
+                                </div>
+                            </li>
+                            <li class="span3">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="DA3.jpeg" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Breed: Labrodar</h4>
+                                    <p>Age:4-6yrs<br>Healthy in condition<br>Location:Gadag </p>
+                                    <a class="btn btn-mini" href="adpotionform.html">&raquo;Are you Intrested in Adoption</a>
+                                </div>
+                            </li>
+                            <li class="span3">
+                                <div class="thumbnail">
+                                    <a href="#"><img src="CA1.jpeg" alt=""></a>
+                                </div>
+                                <div class="caption">
+                                    <h4>Age 5-6 months<br>Healthy in condition and Vaccinations are completed<br>Location:Vidyanagar</h4>
+                                    
+                                    <a class="btn btn-mini" href="adpotionform.html">&raquo;Are you Intrested in Adpotion</a>
+                                </div>
+                            </li>
+                        </ul>
+                  </div> 
+                </form>
+</body>
+</html>
